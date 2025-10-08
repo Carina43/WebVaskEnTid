@@ -1,22 +1,22 @@
 using VaskEnTidLibrary.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using VaskEnTid_Library.Repo;
+using VaskEnTid_Library.Service;
 
 namespace WebVaskEnTid.Pages
 {
     public class BookingOverviewModel : PageModel
     {
 
-        private readonly BookingRepo _bookingRepo;
+        private readonly BookingService _bookingService;
 
         [BindProperty]
         public List<Booking> Bookings { get; set; }
 
-        public BookingOverviewModel(BookingRepo bookingRepo)
+        public BookingOverviewModel(BookingService bookingService)
         {
-            _bookingRepo = bookingRepo;
-            Bookings = bookingRepo.GetAll();
+            _bookingService = bookingService;
+            Bookings = bookingService.GetAllBookings();
         }
 
         public void OnGet()
