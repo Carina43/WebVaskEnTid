@@ -1,0 +1,17 @@
+﻿@page
+@model WebVaskEnTid.Pages.BookingOverviewModel
+@{
+}
+<div class="row row-cols-3">
+    @foreach (var Booking in Model.Bookings)
+    {
+        <div class="card-body">
+            <h4 class="card-title">@Booking.PhoneNumber</h4>
+            <p class="card-text">Telefonnummer: @Booking.BookingDate<br />Mail: @Booking.MachineID</p>
+            <a href="#" class="btn btn-primary">Rediger</a>
+        </div>
+
+    }
+</div>
+
+<p><a href="CustomerCreate">Klik her</a> for at tilføje flere kunder til internattet</p>

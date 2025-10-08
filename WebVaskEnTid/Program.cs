@@ -1,3 +1,4 @@
+using VaskEnTid_Library.Repo;
 namespace WebVaskEnTid
 {
     public class Program
@@ -6,6 +7,8 @@ namespace WebVaskEnTid
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
+            builder.Services.AddSingleton<BookingRepo>();
             // Add services to the container.
             builder.Services.AddRazorPages();
 
