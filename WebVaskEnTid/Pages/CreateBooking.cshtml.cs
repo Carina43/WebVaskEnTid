@@ -27,6 +27,7 @@ namespace WebVaskEnTid.Pages
 
         public IActionResult OnPost()
         {
+            Debug.WriteLine($"CreateBooking OnPost();   PhoneNumber: {NewBooking.PhoneNumber}");
             if (NewBooking.BookingTime.Hour >= 6 || NewBooking.BookingTime.Hour <= 21)
             {
                 _bookingService.CreateBooking(NewBooking);
