@@ -16,7 +16,7 @@ namespace WebVaskEnTid.Pages
         public CancelBookingModel(BookingService bookingService)
         {
             _bookingService = bookingService;
-            //Bookings = bookingService.GetAllBookings();
+            Bookings = bookingService.CancelBooking();
         }
         public void OnGet()
         {
