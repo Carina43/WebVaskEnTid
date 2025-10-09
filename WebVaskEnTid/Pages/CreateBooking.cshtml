@@ -13,16 +13,16 @@
                 <form method="post">
                     <div class="form-group container-fluid">
                         <label for="inputPhoneNumber">Dit Telefonnummer: </label>
-                        <input type="text" asp-for="NewBooking.PhoneNumber" id="PhoneNumber" aria-describedby="dateTimeHelp" placeholder="Enter PhoneNumber" />
+                        <input asp-for="PhoneNumber" id="newphonenumber" aria-describedby="dateTimeHelp" placeholder="Enter PhoneNumber" />
                         <label for="inputDateTime">Dato: </label>
-                        <input type="date" asp-for="NewBooking.BookingDate" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" step="3600">
+                        <input type="date" asp-for="BookingDate" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" step="3600">
                         <label for="inputDateTime">Starttid: </label>
-                        <input type="time" asp-for="NewBooking.BookingTime" id="BookingTime" aria-describedby="dateTimeHelp" placeholder="Enter end time" step="3600" />
+                        <input type="time" asp-for="BookingTime" id="BookingTime" aria-describedby="dateTimeHelp" placeholder="Enter end time" step="3600" />
                     </div>
                     <div class="mt-2">
                         <label for="Lokale">Skift Lokale: </label>
                         <div class="form-group mt-2 d-inline">
-                            <select asp-for="NewBooking.MachineID" id="Maskine">
+                            <select asp-for="MachineID" id="Maskine">
                                 <option value="0">Vælg Maskine</option>
                                 <option value="1">Vask1</option>
                                 <option value="2">Vask2</option>
