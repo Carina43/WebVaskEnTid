@@ -9,7 +9,6 @@ namespace WebVaskEnTid.Pages
     public class CreateBookingModel : PageModel
     {
         private BookingService _bookingService = new BookingService();
-        //private int[] _allowedHours = new int[2] { 6, 21 }
 
 
         [BindProperty]
