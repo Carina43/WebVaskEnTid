@@ -12,7 +12,7 @@ namespace WebVaskEnTid.Pages
         //private int[] _allowedHours = new int[2] { 6, 21 }
 
         [BindProperty]
-        internal Booking NewBooking { get; set; }
+        public Booking NewBooking { get; set; }
 
         public CreateBookingModel(BookingService bookingService)
         {
