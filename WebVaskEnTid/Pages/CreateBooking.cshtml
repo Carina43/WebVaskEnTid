@@ -2,53 +2,47 @@
 @model WebVaskEnTid.Pages.CreateBookingModel
 @{
 }
-@* <body>
+<body>
     <container-sm>
         <div class="text-center">
-            <h1>Opret Booking</h1>
+            <h1>Book lokale</h1>
         </div>
 
         <div class="card shadow-sm">
             <div class="card-body text-center">
                 <form method="post">
                     <div class="form-group container-fluid">
-                        <label for="inputDateTime">Startid: </label>
-                        <input type="datetime-local" asp-for="Animal.TimeAtShelter" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" step="3600">
-
+                        <label for="inputDateTime">Dit Telefonnummer: </label>
+                        <input type="text" asp-for="NewBooking.PhoneNumber" id="PhoneNumber" aria-describedby="dateTimeHelp" placeholder="Enter end time" />
+                        <label for="inputDateTime">Dato: </label>
+                        <input type="date" asp-for="NewBooking.BookingDate" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" step="3600">
+                        <label for="inputDateTime">Starttid: </label>
+                        <input type="time" asp-for="NewBooking.BookingTime" id="BookingTime" aria-describedby="dateTimeHelp" placeholder="Enter end time" step="3600" />
                     </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title">@Booking.PhoneNumber</h4>
-                        <p class="card-text">Telefonnummer: @Booking.BookingDate<br />Mail: @Booking.MachineID</p>
-                        <a href="#" class="btn btn-primary">Rediger</a>
+                    <div class="mt-2">
+                        <label for="Lokale">Skift Lokale: </label>
+                        <div class="form-group mt-2 d-inline">
+                            <select asp-for="NewBooking.MachineID" id="Maskine">
+                                <option value="0">Vælg Maskine</option>
+                                <option value="1">Vask1</option>
+                                <option value="2">Vask2</option>
+                                <option value="3">Vask3</option>
+                                <option value="4">Tør1</option>
+                                <option value="5">Tør2</option>
+                                <option value="6">Rul1</option>
+                            </select>
+                        </div>
                     </div>
-
                     <div class="form-group mt-2">
-                        <label for="inputComment">Skriv Species her: </label>
-                        <input type="text" asp-for="Booking.PhoneNumber" aria-describedby="textHelp" placeholder="Enter a comment">
-
-                        <label for="inputComment">Skriv Name her: </label>
-                        <input type="text" asp-for="Animal.Name" aria-describedby="textHelp" placeholder="Enter a comment">
-
-                        <label for="inputComment">Skriv race her: </label>
-                        <input type="text" asp-for="Animal.race" aria-describedby="textHelp" placeholder="Enter a comment">
-
-                        <label for="inputComment">Skriv age her: </label>
-                        <input type="number" asp-for="Animal.Age" aria-describedby="textHelp" placeholder="Enter a comment">
-
-                        <label for="inputComment">Skriv Description her: </label>
-                        <input type="text" asp-for="Animal.Description" aria-describedby="textHelp" placeholder="Enter a comment">
-
-                        <label for="inputComment">Skriv Gender her: </label>
-                        <input type="text" asp-for="Animal.Gender" aria-describedby="textHelp" placeholder="Enter a comment">
-
+                        <label for="inputComment">Skriv kommentar her: </label>
+                @*         <input type="text" asp-for="NewBooking.Comment" id="inputForm" aria-describedby="textHelp" placeholder="Enter a comment"> *@
                     </div>
-                    <input type="hidden" asp-for="Animal.ChipNumber" value="@Model.idcreate" name="idchreate" />
                     <button type="submit" class="btn btn-primary mt-5">Submit</button>
                 </form>
-                </<div>
-                </div>
             </div>
         </div>
+
+                </<div>
+                </div>
     </container-sm>
-</body> *@
+</body>
