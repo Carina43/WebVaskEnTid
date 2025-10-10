@@ -16,7 +16,7 @@ namespace WebVaskEnTid.Pages
         [BindProperty]
         public DateOnly BookingDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);
         [BindProperty]
-        public TimeOnly BookingTime { get; set; }
+        public TimeOnly BookingTime { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
         [BindProperty]
         public int MachineID { get; set; }
         
