@@ -12,13 +12,19 @@
 </form>
 <div class="row row-cols-3">
 
-	@if (Model.Bookings!=null) {@foreach (var Booking in Model.Bookings)
-	{
+	@if (Model.Bookings!=null) 
+	{@foreach (var Booking in Model.Bookings)
+		{
 		<div class="card-body">
 			<h4 class="card-title">@Booking.PhoneNumber</h4>
 			<p class="card-text">Telefonnummer: @Booking.BookingDate<br />Mail: @Booking.MachineID</p>
-			<a href="#" class="btn btn-primary">Delete</a>
+				<form method="post" asp-page-handler="Delete" class="d-inline">
+					<input type="hidden" name="bookingID" value="@Booking.BookingID" />
+					<button type="submit" class="btn btn-delete mt-1">
+						<i class="bi bi-trash"></i> Delete
+					</button>
+				</form>
 		</div>
-
-	}}
+		}
+	}
 </div>

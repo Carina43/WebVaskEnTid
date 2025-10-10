@@ -38,9 +38,9 @@ namespace WebVaskEnTid.Pages
         }
 
        
-        public void OnPostDelete()
+        public void OnPostDelete(int bookingID)
         {
-           
+           _bookingService.DeleteBooking(bookingID);
         }
     }
 }
