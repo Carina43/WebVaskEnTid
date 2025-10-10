@@ -5,22 +5,20 @@
 <body>
     <container-sm>
         <div class="text-center">
-            <h1>Book lokale</h1>
+            <h1>Opret booking</h1>
         </div>
 
         <div class="card shadow-sm">
             <div class="card-body text-center">
                 <form method="post">
                     <div class="form-group container-fluid">
-                        <label for="inputPhoneNumber">Dit Telefonnummer: </label>
-                        <input asp-for="PhoneNumber" id="newphonenumber" aria-describedby="dateTimeHelp" placeholder="Enter PhoneNumber" />
+                        <input asp-for="PhoneNumber" id="newphonenumber" aria-describedby="dateTimeHelp" placeholder="Telefonnummer" />
                         <label for="inputDateTime">Dato: </label>
                         <input type="date" asp-for="BookingDate" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" step="3600">
                         <label for="inputDateTime">Starttid: </label>
                         <input type="time" asp-for="BookingTime" id="BookingTime" aria-describedby="dateTimeHelp" placeholder="Enter end time" step="3600" />
                     </div>
                     <div class="mt-2">
-                        <label for="Lokale">Skift Lokale: </label>
                         <div class="form-group mt-2 d-inline">
                             <select asp-for="MachineID" id="Maskine">
                                 <option value="0">Vælg Maskine</option>
@@ -33,10 +31,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group mt-2">
-                        <label for="inputComment">Skriv kommentar her: </label>
-                @*         <input type="text" asp-for="NewBooking.Comment" id="inputForm" aria-describedby="textHelp" placeholder="Enter a comment"> *@
-                    </div>
+                   
                     <button type="submit" class="btn btn-primary mt-5">Submit</button>
                 </form>
             </div>

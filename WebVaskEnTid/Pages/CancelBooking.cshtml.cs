@@ -13,13 +13,34 @@ namespace WebVaskEnTid.Pages
         [BindProperty]
         public List<Booking> Bookings { get; set; }
 
+        [BindProperty]
+        public string PhoneNumber { get; set; }
+
         public CancelBookingModel(BookingService bookingService)
         {
             _bookingService = bookingService;
-            Bookings = bookingService.GetAllBookings();
+            //Bookings = bookingService.GetAllBookings();
         }
         public void OnGet()
         {
+        }
+
+        public void OnPostRead()
+        {
+            foreach (var booking in _bookingService.GetAllBookings())
+            {
+                if (booking.PhoneNumber == PhoneNumber)
+                {
+                    Bookings.Add(booking);
+                }
+            }
+            
+        }
+
+       
+        public void OnPostDelete()
+        {
+           
         }
     }
 }

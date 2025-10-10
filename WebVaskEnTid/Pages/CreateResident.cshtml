@@ -1,0 +1,37 @@
+﻿@page
+@model WebVaskEnTid.Pages.CreateResidentModel
+@{
+}
+<body>
+    <container-sm>
+        <div class="text-center">
+            <h1>Opret beboer</h1>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <form method="post">
+                    <div class="form-group container-fluid">
+                        <input asp-for="PhoneNumber" id="newphonenumber" aria-describedby="dateTimeHelp" placeholder="Telefonnummer" />
+                        <input asp-for="FirstName" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Fornavn" step="3600">                    
+                        <input asp-for="LastName" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Efternavn" step="3600">
+                        <input asp-for="Adress" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Adresse" step="3600">
+                        <div 
+                            </div>
+                        <input asp-for="ZipCode" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Postnummer" step="3600">
+                        <input asp-for="City" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="By" step="3600">
+                        <input asp-for="ApartmentNo" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Lejlighedsnummer" step="3600">
+                        <input asp-for="Email" id="BookingDate" aria-describedby="dateTimeHelp" placeholder="Email" step="3600">
+                    </div>
+             
+                    
+                   
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        </<div>
+        </div>
+    </container-sm>
+</body>
